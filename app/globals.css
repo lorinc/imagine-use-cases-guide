@@ -1,26 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF7F2;
+  --foreground: #2C2416;
+  --secondary: #6B5D4F;
+  --accent: #C17B5C;
+  --highlight: #A8B89F;
+  --border: #E8DFD0;
+  --sidebar-bg: #F5F1E8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-border: var(--border);
+  --color-sidebar: var(--sidebar-bg);
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Crimson Text', Georgia, serif;
+  --max-content-width: 700px;
+  --sidebar-width: 280px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.3;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
