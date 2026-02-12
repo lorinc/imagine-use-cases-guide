@@ -36,9 +36,16 @@ export default function Home() {
           </div>
           
           {/* Animated scroll indicator */}
-          <div className="flex flex-col items-center gap-2 animate-bounce pt-8">
+          <div className="relative group flex flex-col items-center gap-2 animate-bounce pt-8">
             <ChevronDown size={32} className="text-accent" />
             <ChevronDown size={32} className="text-accent -mt-6 opacity-60" />
+            
+            {/* Tooltip on hover */}
+            <div className="absolute -bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              <div className="bg-foreground text-background px-3 py-1.5 rounded-md text-sm whitespace-nowrap">
+                No click, just scroll. ;)
+              </div>
+            </div>
           </div>
         </div>
         </div>
