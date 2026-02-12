@@ -1,5 +1,6 @@
 import { getH3Sections } from "@/lib/content";
 import AutoScrollNavigation from "@/components/AutoScrollNavigation";
+import PageTransition from "@/components/PageTransition";
 import { ChevronDown } from "lucide-react";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
         currentSectionId="home"
       />
       
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 py-16 md:py-24 mb-24">
+      <PageTransition>
+        <div className="min-h-screen flex flex-col items-center justify-center px-6 py-16 md:py-24 mb-24">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             AI Use Case Evaluation Guide
@@ -39,7 +41,8 @@ export default function Home() {
             <ChevronDown size={32} className="text-accent -mt-6 opacity-60" />
           </div>
         </div>
-      </div>
+        </div>
+      </PageTransition>
     </>
   );
 }

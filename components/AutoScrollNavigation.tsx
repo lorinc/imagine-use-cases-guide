@@ -64,8 +64,12 @@ export default function AutoScrollNavigation({ previous, next, currentSectionId 
         if (progress >= 100) {
           setIsNavigating(true);
           if (atTop && previous) {
+            // Store navigation direction for animation
+            sessionStorage.setItem('navDirection', 'up');
             router.push(getSectionUrl(previous));
           } else if (atBottom && next) {
+            // Store navigation direction for animation
+            sessionStorage.setItem('navDirection', 'down');
             router.push(getSectionUrl(next));
           }
         }
