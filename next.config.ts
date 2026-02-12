@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Uncomment and set basePath if deploying to a subdirectory like github.io/repo-name
-  // basePath: '/repo-name',
+  basePath: '/imagine-use-cases-guide',
 };
 
 export default nextConfig;
